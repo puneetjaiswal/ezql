@@ -36,8 +36,8 @@ public class EZQLParser extends Parser {
 
 	private static final String[] _LITERAL_NAMES = {
 		null, "'|'", "';'", "'>>'", "'limit'", "'('", "','", "')'", "'by'", "'count'", 
-		"'sum'", null, null, null, null, "'AND'", null, null, "'has'", "'contains'", 
-		null, null, "'='", "'!='", null, null, "'>'", "'<'"
+		"'sum'", null, null, null, "'between'", "'AND'", null, null, "'has'", 
+		"'contains'", null, null, "'='", "'!='", null, null, "'>'", "'<'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
 		null, null, null, null, null, null, null, null, null, null, null, "DB", 

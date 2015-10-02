@@ -39,6 +39,7 @@ WS=31
 'by'=8
 'count'=9
 'sum'=10
+'between'=14
 'AND'=15
 'has'=18
 'contains'=19

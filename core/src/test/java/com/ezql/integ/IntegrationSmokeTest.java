@@ -146,7 +146,7 @@ public class IntegrationSmokeTest {
 	response = executeQuery(buildQuery(query));
 	assertEquals(response.getHits().totalHits(), 4);
 
-	query = "id <> (1,4) | timestamp between (2015-02-28T05:09:40.134-0700, \"2015-02-28T05:09:43.134-0700\");";
+	query = "id between (1,4) | timestamp between (2015-02-28T05:09:40.134-0700, \"2015-02-28T05:09:43.134-0700\");";
 	response = executeQuery(buildQuery(query));
 	assertEquals(response.getHits().totalHits(), 4);
     }
