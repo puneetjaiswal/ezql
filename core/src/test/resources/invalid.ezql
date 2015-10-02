@@ -1,0 +1,4 @@
+512=field1 ;
+status=400 or failure ;
+ hostName=api03or clusterName=cl01 
+ status=(1,2,3) ;

@@ -1,0 +1,3 @@
+antlr:
+	antlr4 -o ./ -listener -no-visitor -package com.ezql.parser ./src/main/java/com/ezql/parser/EZQL.g4
+

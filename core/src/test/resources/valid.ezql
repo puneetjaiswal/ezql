@@ -1,0 +1,13 @@
+statusCode=400 | count by statusCode ;
+statusCode=512 | error fatal warn | hostName=api03 or clusterName=cl01 ;
+statusCode=512 | error failure | hostName=api03 or clusterName="cl01" or field2=10 ;
+"index compaction failed" | hostName=api03 ;
+"index compaction failed" error failure | hostName=api03 ;
+logLevel in (WARN, INFO, FATAL) | message has ("index compaction failed", error, "failure") ;
+logLevel not in (WARN, INFO, FATAL) | message contains ("index compaction", "failed") ;
+id in (1,4) | timestamp between (2015-02-28T05:09:40.134-0700, "2015-02-28T05:09:43.134-0700");
+DB>>EUM | statusCode in (400,512,500) ;
+db>>logs| statusCode in (400,512,500) ;
+db>>transactions | statusCode in (400,512,500) limit 10 ;
+db>>log | statusCode in (400,512,500) | limit 10 ;
+db>>database | statusCode in (400,512,500) | count by hostname,statusCode limit 10 ;  

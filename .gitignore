@@ -1,0 +1,14 @@
+*~
+.DS_Store
+.project
+.idea
+.settings
+.classpath
+.metadata
+target
+test-output
+*.iml
+Maven*xml
+core/data/*
+data/*
+server/data/*
